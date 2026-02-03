@@ -1,5 +1,6 @@
 package com.example.examenandroid
 
+import TasquesFragment
 import android.os.Bundle
 import android.view.View
 import androidx.activity.enableEdgeToEdge
@@ -14,5 +15,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
 
+        if (savedInstanceState == null){
+            supportFragmentManager.beginTransaction().replace(R.id.fragmentContainer,
+                TasquesFragment()).commit()
+        }
     }
 }

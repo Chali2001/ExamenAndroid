@@ -1,4 +1,4 @@
-import TasquesAdapter
+
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.appcompat.widget.Toolbar
@@ -22,7 +22,9 @@ class TasquesFragment : Fragment() {
     private lateinit var chipGroup: ChipGroup
     private lateinit var toolbar: Toolbar
     private val adapter = TasquesAdapter()
+
     private var categoriaSeleccionada: Categoria? = null
+
 
 
 
@@ -37,9 +39,9 @@ class TasquesFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        toolbar = view.findViewById(R.id.toolbar)
+        toolbar = view.findViewById(R.id.barraArriba)
         recyclerView = view.findViewById(R.id.recyclerView)
-        chipGroup = view.findViewById(R.id.chipGroup)
+        chipGroup = view.findViewById(R.id.chipTotes)
 
         setupRecyclerView()
         setupChips()
@@ -101,4 +103,5 @@ class TasquesFragment : Fragment() {
         }
         adapter.setTasques(tasquesFiltrades)
     }
+
 }
