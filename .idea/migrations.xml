@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectMigrations">
+    <option name="MigrateToGradleLocalJavaHome">
+      <set>
+        <option value="$PROJECT_DIR$/../../DAM 488, 489 i 1708- Desenvolupament Sostenible d'aplicacions mòbils/ExamenAndroid" />
+      </set>
+    </option>
+  </component>
+</project>
