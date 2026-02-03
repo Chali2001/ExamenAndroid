@@ -1,6 +1,7 @@
 package com.example.examenandroid
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
@@ -11,6 +12,9 @@ class TasquesAdapter : RecyclerView.Adapter<TascaViewHolder>() {
     fun setTasques(novesTasques: List<Tasca>) {
         tasques = novesTasques
         notifyDataSetChanged()
+    }
+    class TascaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TascaViewHolder {

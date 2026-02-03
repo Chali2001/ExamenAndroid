@@ -9,7 +9,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.examenandroid.Categoria
+import com.example.examenandroid.Estat
 import com.example.examenandroid.R
+import com.example.examenandroid.Tasca
 import com.example.examenandroid.TasquesAdapter
 import com.example.examenandroid.TasquesRepository
 import com.google.android.material.chip.Chip
@@ -21,6 +23,8 @@ class TasquesFragment : Fragment() {
     private lateinit var toolbar: Toolbar
     private val adapter = TasquesAdapter()
     private var categoriaSeleccionada: Categoria? = null
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -87,7 +91,6 @@ class TasquesFragment : Fragment() {
             }
         })
     }
-
     private fun actualitzarTasques() {
         val tasquesFiltrades = if (categoriaSeleccionada != null) {
             TasquesRepository.tasques.filter {
